@@ -1,0 +1,27 @@
+a:visited{
+color:green;
+}
+a:link {
+color:lightseagreen
+}
+a:hover{
+color: navy;
+}
+a:active{
+    color:red
+
+}
+  section h1 {
+   font-family:cursive;
+   font-size:xx-large;   
+}
+nav > a  {
+    font-family: fantasy;
+    font-style:italic;
+}
+h1+h3{
+   font-style: oblique;
+   font-family:cursive;
+   font-size: 20px;
+   background-color:wheat;
+}
