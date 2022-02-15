@@ -101,7 +101,7 @@ h1+h3{
 }
 
 @keyframes linkanimation{
-    0% { background-color: aliceblue;}
+    0% { background-color: navajowhite;}
     50% { background-color: blanchedalmond;}
-    100% {;background-color: aliceblue;}
+    100% {;background-color: white;}
 }
