@@ -36,25 +36,38 @@ header span{
 }
 
 a:visited{
-color:green;
+color:black;
+font-weight: bold;
 }
+
 a:link {
-color:lightseagreen
+color:tomato;
 }
+
 a:hover{
-color: navy;
+color: peru;
+animation-name: linkanimation ;
+animation-duration: 2s;
+animation-timing-function: linear;
 }
 a:active{
     color:red;
-
 }
-  section h1 {
-   font-family:cursive;
-   font-size:xx-large;   
+
+section h1 {
+font-family:cursive;
+font-size:xx-large;   
 }
 nav > a  {
     font-family: fantasy;
     font-style:italic;
+    transition-property:all ;
+    transition-duration: 1ms;
+    transition-timing-function: linear;
+    transition-delay:10ms;
+    border: 2px  black;
+    
+
 }
 h1+h3{
    font-style: oblique;
@@ -62,4 +75,33 @@ h1+h3{
    font-size: 20px;
    background-color:blanchedalmond;
    
+}
+.summary h1{
+
+    width:100vw;
+    background-color:navajowhite;
+    border: 3px solid wheat ;
+    transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function:linear;
+    transition-delay: 1s;
+    animation-name: welcome;
+    animation-duration: 5s;
+    
+}
+.summary h1:hover{
+    width: 100vw;
+    background-color:peru;
+    animation-name: welcome;
+}
+@keyframes welcome {
+    0% { background-color: blanchedalmond;}
+    50% { background-color:navajowhite}
+    100%{background-color: peru}
+}
+
+@keyframes linkanimation{
+    0% { background-color: aliceblue;}
+    50% { background-color: blanchedalmond;}
+    100% {;background-color: aliceblue;}
 }
