@@ -103,5 +103,33 @@ h1+h3{
 @keyframes linkanimation{
     0% { background-color: navajowhite;}
     50% { background-color: blanchedalmond;}
-    100% {;background-color: white;}
+    100% { background-color:white;}
+}
+
+@media only screen and (min-width:600px){
+  .grid-container img{
+        height:50px
+    }
+    nav{
+        width: fit-content;
+    }
+    section{
+        width: fit-content;
+    }
+    .grid-container img{
+        display: none;
+    }
+
+}
+
+@media only screen and (min-wdith:1000px){
+nav{
+    width: fit-content;
+}
+
+}
+@media only screen and (min-width:1100px){
+    nav{
+        width:100vw;
+    }
 }
