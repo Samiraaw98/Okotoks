@@ -1,0 +1,150 @@
+
+$box-shadow: 5px 5px burlywood;
+$border: 1px black solid ;  
+@mixin  welcome{
+    width:100vw;
+    background-color:navajowhite;
+    border: 3px solid wheat ;
+    transition-property: all;
+    transition-duration: 2.5s;
+    transition-timing-function:linear;
+    transition-delay: 50ms;
+    animation-duration: 5s;
+    box-shadow: $box-shadow;
+}
+
+
+.grid-container{
+    display: grid;
+    grid-template-columns:1fr 2fr 1fr;
+    grid-template-rows:auto ;
+    border: $border ;   
+}
+
+.summary{
+    display: grid;
+    grid-template-columns:auto;
+    grid-template-rows: auto;
+}
+.images{
+    display:grid;
+    grid-template-columns:1fr 2fr;
+    grid-template-rows: auto;
+    column-gap: 3px;
+    row-gap: 5px;   
+}
+#footer{
+   position: relative;
+   height: 100px;
+   margin-top: 100px;
+   padding-top: 50px;
+}
+
+html{
+    background-color:blanchedalmond;
+}
+header {
+    box-shadow: $box-shadow;
+    span{
+    font-size: 3em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+}
+
+a:visited{
+color:black;
+font-weight: bold;
+}
+
+a:link {
+color:tomato;
+}
+
+a:hover{
+color: peru;
+animation-name: linkanimation ;
+animation-duration: 2s;
+animation-timing-function: linear;
+}
+a:active{
+    color:red;
+}
+
+section {
+    h1 {
+font-family:cursive;
+font-size:xx-large;   
+}
+
+}
+nav {
+    a  {
+    font-family: fantasy;
+    font-style:italic;
+    transition-property:all ;
+    transition-duration: 1ms;
+    transition-timing-function: linear;
+    transition-delay:10ms;
+    border: 2px  black;
+    
+}
+}
+
+h1{
+    h3{
+   font-style: oblique;
+   font-family:cursive;
+   font-size: 20px;
+   background-color:blanchedalmond;
+}
+}
+
+
+.summary {
+    h1:hover{
+    width: 100vw;
+    background-color:peru;
+    animation-name: welcome;
+}
+h1{
+    @include welcome()
+}
+}
+
+@keyframes welcome {
+    0% { background-color: blanchedalmond;}
+    50% { background-color:navajowhite}
+    100%{background-color: peru}
+}
+
+@keyframes linkanimation{
+    0% { background-color: navajowhite;}
+    50% { background-color: blanchedalmond;}
+    100% { background-color:white;}
+}
+
+@media only screen and (min-width:600px){
+  .grid-container img{
+        height:50px
+    }
+    nav{
+        width: fit-content;
+    }
+    section{
+        width: fit-content;
+    }
+   
+}
+
+@media only screen and (min-wdith:1000px){
+nav{
+    width: fit-content;
+}
+
+}
+@media only screen and (min-width:1100px){
+    nav{
+        width:100vw;
+    }
+}

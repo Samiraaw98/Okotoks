@@ -1,135 +1,204 @@
-.grid-container{
-    display: grid;
-    grid-template-columns:1fr 2fr 1fr;
-    grid-template-rows:auto ;
-    border: 1px black solid ;   
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr 1fr;
+      grid-template-columns: 1fr 2fr 1fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  border: 1px black solid;
 }
 
-.summary{
-    display: grid;
-    grid-template-columns:auto;
-    grid-template-rows: auto;
-}
-.images{
-    display:grid;
-    grid-template-columns:1fr 2fr;
-    grid-template-rows: auto;
-    column-gap: 3px;
-    row-gap: 5px;   
-}
-#footer{
-   position: relative;
-   height: 100px;
-   margin-top: 100px;
-   padding-top: 50px;
-}
-.images div{
-    overflow: scroll;
+.summary {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
 }
 
-html{
-    background-color:blanchedalmond;
-}
-header span{
-    font-size: 3em;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+.images {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  -webkit-column-gap: 3px;
+          column-gap: 3px;
+  row-gap: 5px;
 }
 
-a:visited{
-color:black;
-font-weight: bold;
+#footer {
+  position: relative;
+  height: 100px;
+  margin-top: 100px;
+  padding-top: 50px;
+}
+
+html {
+  background-color: blanchedalmond;
+}
+
+header {
+  -webkit-box-shadow: 5px 5px burlywood;
+          box-shadow: 5px 5px burlywood;
+}
+
+header span {
+  font-size: 3em;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+a:visited {
+  color: black;
+  font-weight: bold;
 }
 
 a:link {
-color:tomato;
+  color: tomato;
 }
 
-a:hover{
-color: peru;
-animation-name: linkanimation ;
-animation-duration: 2s;
-animation-timing-function: linear;
+a:hover {
+  color: peru;
+  -webkit-animation-name: linkanimation;
+          animation-name: linkanimation;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
-a:active{
-    color:red;
+
+a:active {
+  color: red;
 }
 
 section h1 {
-font-family:cursive;
-font-size:xx-large;   
+  font-family: cursive;
+  font-size: xx-large;
 }
-nav > a  {
-    font-family: fantasy;
-    font-style:italic;
-    transition-property:all ;
-    transition-duration: 1ms;
-    transition-timing-function: linear;
-    transition-delay:10ms;
-    border: 2px  black;
-    
 
+nav a {
+  font-family: fantasy;
+  font-style: italic;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 1ms;
+          transition-duration: 1ms;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  -webkit-transition-delay: 10ms;
+          transition-delay: 10ms;
+  border: 2px  black;
 }
-h1+h3{
-   font-style: oblique;
-   font-family:cursive;
-   font-size: 20px;
-   background-color:blanchedalmond;
-   
-}
-.summary h1{
 
-    width:100vw;
-    background-color:navajowhite;
-    border: 3px solid wheat ;
-    transition-property: all;
-    transition-duration: 2s;
-    transition-timing-function:linear;
-    transition-delay: 1s;
-    animation-name: welcome;
-    animation-duration: 5s;
-    
+h1 h3 {
+  font-style: oblique;
+  font-family: cursive;
+  font-size: 20px;
+  background-color: blanchedalmond;
 }
-.summary h1:hover{
-    width: 100vw;
-    background-color:peru;
-    animation-name: welcome;
+
+.summary h1:hover {
+  width: 100vw;
+  background-color: peru;
+  -webkit-animation-name: welcome;
+          animation-name: welcome;
 }
+
+.summary h1 {
+  width: 100vw;
+  background-color: navajowhite;
+  border: 3px solid wheat;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 2.5s;
+          transition-duration: 2.5s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  -webkit-transition-delay: 50ms;
+          transition-delay: 50ms;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-box-shadow: 5px 5px burlywood;
+          box-shadow: 5px 5px burlywood;
+}
+
+@-webkit-keyframes welcome {
+  0% {
+    background-color: blanchedalmond;
+  }
+  50% {
+    background-color: navajowhite;
+  }
+  100% {
+    background-color: peru;
+  }
+}
+
 @keyframes welcome {
-    0% { background-color: blanchedalmond;}
-    50% { background-color:navajowhite}
-    100%{background-color: peru}
+  0% {
+    background-color: blanchedalmond;
+  }
+  50% {
+    background-color: navajowhite;
+  }
+  100% {
+    background-color: peru;
+  }
 }
 
-@keyframes linkanimation{
-    0% { background-color: navajowhite;}
-    50% { background-color: blanchedalmond;}
-    100% { background-color:white;}
+@-webkit-keyframes linkanimation {
+  0% {
+    background-color: navajowhite;
+  }
+  50% {
+    background-color: blanchedalmond;
+  }
+  100% {
+    background-color: white;
+  }
 }
 
-@media only screen and (min-width:600px){
-  .grid-container img{
-        height:50px
-    }
-    nav{
-        width: fit-content;
-    }
-    section{
-        width: fit-content;
-    }
-    .grid-container img{
-        display: none;
-    }
-
+@keyframes linkanimation {
+  0% {
+    background-color: navajowhite;
+  }
+  50% {
+    background-color: blanchedalmond;
+  }
+  100% {
+    background-color: white;
+  }
 }
 
-@media only screen and (min-wdith:1000px){
-nav{
+@media only screen and (min-width: 600px) {
+  .grid-container img {
+    height: 50px;
+  }
+  nav {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
+  }
+  section {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
 }
 
+@media only screen and (min-wdith: 1000px) {
+  nav {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
 }
-@media only screen and (min-width:1100px){
-    nav{
-        width:100vw;
-    }
+
+@media only screen and (min-width: 1100px) {
+  nav {
+    width: 100vw;
+  }
 }
+/*# sourceMappingURL=style.css.map */
